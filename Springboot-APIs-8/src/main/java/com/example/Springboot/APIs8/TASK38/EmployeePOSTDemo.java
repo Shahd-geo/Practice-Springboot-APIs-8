@@ -5,4 +5,9 @@ import java.util.List;
 
 public class EmployeePOSTDemo {
     private static List<Employee> employees = new ArrayList<>();
+    public static void main(String[] args) {
+        //  Store existing employees
+        employees.add(new Employee("E102", "Sara", "HR"));
+        employees.add(new Employee("E102", "Ahmed", "Finance"));
+        employees.add(new Employee("E103", "John", "Marketing"));
 }
