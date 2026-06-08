@@ -17,6 +17,9 @@ public class EmployeePOSTDemo {
         }
         // New Employee (POST Request Simulation)
         Employee newEmployee = new Employee("E104", "Ali", "IT");
+        // Validation - Check Duplicate ID
+         boolean exists = false;
+
 
 
     }
