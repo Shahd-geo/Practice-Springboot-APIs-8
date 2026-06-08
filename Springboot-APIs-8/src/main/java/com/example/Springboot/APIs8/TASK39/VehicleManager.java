@@ -6,12 +6,13 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class VehicleManager {
-    private static List<Vehicle> vehicle = new ArrayList<>();
-
-    public static void main(String[] args) {
+    private  List<Vehicle> vehicle = new ArrayList<>();
+    public VehicleManager(){
         //  Store existing employees
-        vehicle.add(new Vehicle("V101", "Toyota Corolla", " 20 OMR/day  "));
-        vehicle.add(new Vehicle("V102", "Nissan Sunny", "18 OMR/day  "));
-        vehicle.add(new Vehicle("V103", "Hyundai Elantra", "22 OMR/day")
-    public
+        vehicle.add(new Vehicle("V101", "Toyota Corolla",  20 );
+        vehicle.add(new Vehicle("V102", "Nissan Sunny", 18 ));
+        vehicle.add(new Vehicle("V103", "Hyundai Elantra", 22 ));
+    }
+        // Add Create Method
+
 }

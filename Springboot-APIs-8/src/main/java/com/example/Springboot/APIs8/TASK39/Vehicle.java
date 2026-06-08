@@ -10,6 +10,6 @@ import lombok.NoArgsConstructor;
 public class Vehicle {
     private String vehicleId;
     private String vehicleModel;
-    private  String rentalPricePerDay;
+    private  double rentalPricePerDay;
 
 }
