@@ -14,6 +14,10 @@ public class EmployeePOSTDemo {
         System.out.println("=== Existing Employees ===");
         for (Employee employee : employees) {
             System.out.println(employee);
+        }
+        // New Employee (POST Request Simulation)
+        Employee newEmployee = new Employee("E104", "Ali", "IT");
+
 
     }
 
