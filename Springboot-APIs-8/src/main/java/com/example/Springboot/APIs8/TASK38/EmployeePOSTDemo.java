@@ -18,18 +18,26 @@ public class EmployeePOSTDemo {
         // New Employee (POST Request Simulation)
         Employee newEmployee = new Employee("E104", "Ali", "IT");
         // Validation - Check Duplicate ID
-         boolean exists = false;
-         for (Employee employee : employees){
-             if (employee.getId().equalsIgnoreCase(newEmployee.getId())){
-                 exists=true;
-                 break;
-             }
-         }
-         //perform POST Operation
+        boolean exists = false;
+        for (Employee employee : employees) {
+            if (employee.getId().equalsIgnoreCase(newEmployee.getId())) {
+                exists = true;
+                break;
+            }
+        }
+        //perform POST Operation
         if (exists) {
-        System.out.println("\nEmployee ID already exists.");
-        System.out.println("No employee was created.");
+            System.out.println("\nEmployee ID already exists.");
+            System.out.println("No employee was created.");
+        } else {
+            employees.add(newEmployee);
 
+            System.out.println("\nEmployee Added Successfully");
+            System.out.println("Employee ID: " + newEmployee.getId());
+            System.out.println("Employee Name: " + newEmployee.getName());
+            System.out.println("Status: Created");
+        }
+    }
 
 
 
