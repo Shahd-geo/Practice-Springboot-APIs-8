@@ -26,6 +26,9 @@ public class EmployeePOSTDemo {
              }
          }
          //perform POST Operation
+        if (exists) {
+        System.out.println("\nEmployee ID already exists.");
+        System.out.println("No employee was created.");
 
 
 
