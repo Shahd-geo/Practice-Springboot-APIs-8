@@ -5,6 +5,7 @@ import java.util.List;
 
 public class EmployeePOSTDemo {
     private static List<Employee> employees = new ArrayList<>();
+
     public static void main(String[] args) {
         //  Store existing employees
         employees.add(new Employee("E102", "Sara", "HR"));
@@ -37,9 +38,10 @@ public class EmployeePOSTDemo {
             System.out.println("Employee Name: " + newEmployee.getName());
             System.out.println("Status: Created");
         }
+        //Display Updated Employee List
+        System.out.println("\n=== Updated Employee List ===");
+        for (Employee employee : employees) {
+            System.out.println(employee);
+        }
     }
-
-
-
-    }
-
+}
