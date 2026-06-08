@@ -43,19 +43,15 @@ public class CampaignManager {
     }
     public static void main(String[] args) {
         CampaignManager manager = new CampaignManager();
-
         // Display existing campaigns
         System.out.println("Existing Campaigns:");
         manager.displayCampaigns();
-
         // Test POST operation with a new campaign
         Campaign newCampaign = new Campaign("C104", "Ramadan Offer", "Facebook Ads", 700);
         System.out.println("\n" + manager.addCampaign(newCampaign));
-
         // Display updated campaign list
         System.out.println("\nUpdated Campaign List:");
         manager.displayCampaigns();
-
         // Test duplicate case
         Campaign duplicateCampaign = new Campaign("C102", "Winter Sale", "TikTok Ads", 400);
         System.out.println("\n" + manager.addCampaign(duplicateCampaign));
