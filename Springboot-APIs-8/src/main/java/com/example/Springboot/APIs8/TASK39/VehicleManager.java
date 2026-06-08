@@ -32,5 +32,9 @@ public class VehicleManager {
         }
     }
 
+    public static void main(String[] args) {
+        Vehicle newVehicle= new Vehicle("V104"," Kia Sportage",30);
+    }
+
 
 }
