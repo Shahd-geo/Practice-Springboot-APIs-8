@@ -19,6 +19,11 @@ public class EmployeePOSTDemo {
         Employee newEmployee = new Employee("E104", "Ali", "IT");
         // Validation - Check Duplicate ID
          boolean exists = false;
+         for (Employee employee : employees){
+             if (employee.getId().equalsIgnoreCase(newEmployee.getId())){
+                 exists=true;
+             }
+         }
 
 
 
