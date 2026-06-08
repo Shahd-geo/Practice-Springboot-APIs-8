@@ -34,7 +34,7 @@ public class Employee {
     public void setDepartment(String department) {
         this.department = department;
     }
-
+//Print all employee records before adding a new employee-using to string
     @Override
     public String toString() {
         return id + " → " + name + " → " + department;
