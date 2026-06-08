@@ -25,7 +25,12 @@ public class VehicleManager {
         System.out.println("Vehicle Added Successfully");
         return ("Vehicle ID: " + vehicle.getVehicleId())+"Vehicle Model: " + vehicle.getVehicleModel()+ "Rental Price Per Day: " + vehicle.getRentalPricePerDay() + " OMR" + "Status:Created";
     }
-
+    // Add Display Method
+    public void displayVehicles() {
+        for (Vehicle vehicle : vehicles) {
+            System.out.println(vehicle);
+        }
+    }
 
 
 }
