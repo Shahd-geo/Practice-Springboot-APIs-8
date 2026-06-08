@@ -9,7 +9,7 @@ import lombok.NoArgsConstructor;
 @Data
 public class Vehicle {
     private String vehicleId;
-    private int vehicleModel;
-    private  int rentalPricePerDay;
+    private String vehicleModel;
+    private  String rentalPricePerDay;
 
 }
