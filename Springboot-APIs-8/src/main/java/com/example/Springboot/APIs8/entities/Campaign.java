@@ -17,4 +17,16 @@ public class Campaign {
     private String campaignName;
     private String platform;
     private double budget;
+    @ManyToOne
+    private Employee employee;
+    public Campaign(Integer campaignId,
+                    String campaignName,
+                    String platform,
+                    double budget) {
+
+        this.campaignId = campaignId;
+        this.campaignName = campaignName;
+        this.platform = platform;
+        this.budget = budget;
+    }
 }
