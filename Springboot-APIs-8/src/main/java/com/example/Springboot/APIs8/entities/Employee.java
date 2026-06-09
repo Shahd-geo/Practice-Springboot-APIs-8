@@ -11,13 +11,15 @@ import java.util.List;
 @Entity
 @Table(name = "employees")
 public class Employee {
+    @OneToMany
+    private List<Campaign> campaigns;
+
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
     private Integer id;
     private String name;
     private String department;
-    @OneToMany
-    private List<Campaign> campaigns;
+
 
 
 //Print all employee records before adding a new employee-using to string
