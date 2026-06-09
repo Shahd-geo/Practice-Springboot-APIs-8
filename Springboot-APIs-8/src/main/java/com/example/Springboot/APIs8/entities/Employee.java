@@ -4,6 +4,8 @@ import jakarta.persistence.*;
 import lombok.AllArgsConstructor;
 import lombok.Data;
 
+import java.util.List;
+
 @AllArgsConstructor
 @Data
 @Entity
@@ -14,6 +16,8 @@ public class Employee {
     private Integer id;
     private String name;
     private String department;
+    @OneToMany
+    private List<Campaign> campaigns;
 
 
 //Print all employee records before adding a new employee-using to string
