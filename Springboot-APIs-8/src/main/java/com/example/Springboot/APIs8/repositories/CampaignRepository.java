@@ -1,4 +1,7 @@
 package com.example.Springboot.APIs8.repositories;
 
-public interface CampaignRepository {
+import com.example.Springboot.APIs8.entities.Campaign;
+import org.springframework.data.jpa.repository.JpaRepository;
+
+public interface CampaignRepository extends JpaRepository<Campaign, Integer> {
 }
