@@ -1,5 +1,7 @@
 package com.example.Springboot.APIs8.TASK40;
 
+import com.example.Springboot.APIs8.entities.Campaign;
+
 import java.util.ArrayList;
 import java.util.List;
 

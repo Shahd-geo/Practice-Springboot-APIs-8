@@ -1,10 +1,12 @@
-package com.example.Springboot.APIs8.TASK38;
+package com.example.Springboot.APIs8.entities;
 
+import jakarta.persistence.Entity;
 import lombok.AllArgsConstructor;
 import lombok.Data;
 
 @AllArgsConstructor
 @Data
+@Entity
 public class Employee {
     private String id;
     private String name;
