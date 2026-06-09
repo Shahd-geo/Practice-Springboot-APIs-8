@@ -1,7 +1,6 @@
 package com.example.Springboot.APIs8.entities;
 
-import jakarta.persistence.Entity;
-import jakarta.persistence.Table;
+import jakarta.persistence.*;
 import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
@@ -13,7 +12,8 @@ import lombok.NoArgsConstructor;
 @Table(name = "vehicles")
 
 public class Vehicle {
-
+@Id
+@GeneratedValue(strategy = GenerationType.AUTO)
     private Integer vehicleId;
     private String vehicleModel;
     private  double rentalPricePerDay;
