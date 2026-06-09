@@ -1,6 +1,7 @@
 package com.example.Springboot.APIs8.entities;
 
 import jakarta.persistence.Entity;
+import jakarta.persistence.Table;
 import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
@@ -9,6 +10,8 @@ import lombok.NoArgsConstructor;
 @NoArgsConstructor
 @Data
 @Entity
+@Table(name = "vehicles")
+
 public class Vehicle {
     private String vehicleId;
     private String vehicleModel;
