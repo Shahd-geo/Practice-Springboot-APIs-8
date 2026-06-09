@@ -13,7 +13,8 @@ import lombok.NoArgsConstructor;
 @Table(name = "vehicles")
 
 public class Vehicle {
-    private String vehicleId;
+
+    private Integer vehicleId;
     private String vehicleModel;
     private  double rentalPricePerDay;
 
