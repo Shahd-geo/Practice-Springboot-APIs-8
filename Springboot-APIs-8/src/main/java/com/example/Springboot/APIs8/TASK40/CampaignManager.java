@@ -58,4 +58,5 @@ public class CampaignManager {
         Campaign duplicateCampaign = new Campaign(102, "Winter Sale", "TikTok Ads", 400);
         System.out.println("\n" + manager.addCampaign(duplicateCampaign));
     }
+    @A
 }
