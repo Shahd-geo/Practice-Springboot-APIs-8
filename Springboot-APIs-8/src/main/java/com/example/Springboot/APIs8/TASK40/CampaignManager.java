@@ -9,13 +9,13 @@ public class CampaignManager {
     private List<Campaign> campaigns = new ArrayList<>();
     // Initialize with sample campaigns
     public CampaignManager() {
-        campaigns.add(new Campaign("C101", "Summer Sale", "Instagram", 500));
-        campaigns.add(new Campaign("C102", "Black Friday", "Google Ads", 1000));
-        campaigns.add(new Campaign("C103", "Email Promo", "Email", 300));
+        campaigns.add(new Campaign(101, "Summer Sale", "Instagram", 500));
+        campaigns.add(new Campaign(102, "Black Friday", "Google Ads", 1000));
+        campaigns.add(new Campaign(103, "Email Promo", "Email", 300));
     }
     // POST method to add a new campaign
     public String addCampaign(Campaign campaign) {
-        if (isDuplicate(campaign.getCampaignId())) {
+        if (isDuplicate(String.valueOf(campaign.getCampaignId()))) {
             return "Campaign ID already exists\nNo campaign was created";
         } else {
             campaigns.add(campaign);
@@ -49,13 +49,13 @@ public class CampaignManager {
         System.out.println("Existing Campaigns:");
         manager.displayCampaigns();
         // Test POST operation with a new campaign
-        Campaign newCampaign = new Campaign("C104", "Ramadan Offer", "Facebook Ads", 700);
+        Campaign newCampaign = new Campaign(104, "Ramadan Offer", "Facebook Ads", 700);
         System.out.println("\n" + manager.addCampaign(newCampaign));
         // Display updated campaign list
         System.out.println("\nUpdated Campaign List:");
         manager.displayCampaigns();
         // Test duplicate case
-        Campaign duplicateCampaign = new Campaign("C102", "Winter Sale", "TikTok Ads", 400);
+        Campaign duplicateCampaign = new Campaign(102, "Winter Sale", "TikTok Ads", 400);
         System.out.println("\n" + manager.addCampaign(duplicateCampaign));
     }
 }

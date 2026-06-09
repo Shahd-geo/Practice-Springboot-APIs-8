@@ -10,21 +10,21 @@ public class EmployeePOSTDemo {
 
     public static void main(String[] args) {
         //  Store existing employees
-        employees.add(new Employee("E101", "Sara", "HR"));
-        employees.add(new Employee("E102", "Ahmed", "Finance"));
-        employees.add(new Employee("E103", "John", "Marketing"));
+        employees.add(new Employee(101, "Sara", "HR"));
+        employees.add(new Employee(102, "Ahmed", "Finance"));
+        employees.add(new Employee(103, "John", "Marketing"));
         // Display Existing Employees
         System.out.println("=== Existing Employees ===");
         for (Employee employee : employees) {
             System.out.println(employee);
         }
         // New Employee (POST Request Simulation)
-        Employee newEmployee = new Employee("E101", "Ali", "IT");
+        Employee newEmployee = new Employee(101, "Ali", "IT");
 
         // Validation - Check Duplicate ID
         boolean exists = false;
         for (Employee employee : employees) {
-            if (employee.getId().equalsIgnoreCase(newEmployee.getId())) {
+            if (employee.getId().equals(newEmployee.getId())) {
                 exists = true;
                 break;
             }

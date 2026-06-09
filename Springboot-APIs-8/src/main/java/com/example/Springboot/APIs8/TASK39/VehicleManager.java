@@ -9,15 +9,15 @@ public class VehicleManager {
     private  List<Vehicle> vehicles = new ArrayList<>();
     public static void main(String[] args) {
         VehicleManager vehicleManager = new VehicleManager();
-        Vehicle newVehicle = new Vehicle("V104", "Kia Sportage", 30);
+        Vehicle newVehicle = new Vehicle(104, "Kia Sportage", 30);
         System.out.println(vehicleManager.addVehicle(newVehicle));
         vehicleManager.displayVehicles();
     }
     public VehicleManager(){
         //  Store existing employees
-        vehicles.add(new Vehicle("V101", "Toyota Corolla",  20 ));
-        vehicles.add(new Vehicle("V102", "Nissan Sunny", 18 ));
-        vehicles.add(new Vehicle("V103", "Hyundai Elantra", 22 ));
+        vehicles.add(new Vehicle(101, "Toyota Corolla",  20 ));
+        vehicles.add(new Vehicle(102, "Nissan Sunny", 18 ));
+        vehicles.add(new Vehicle(103, "Hyundai Elantra", 22 ));
     }
         // Add Create Method
     public  String addVehicle(Vehicle vehicle) {
