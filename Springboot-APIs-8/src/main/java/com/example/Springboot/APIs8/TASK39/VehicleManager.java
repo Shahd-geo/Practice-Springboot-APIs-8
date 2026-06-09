@@ -8,8 +8,10 @@ import java.util.List;
 public class VehicleManager {
     private  List<Vehicle> vehicles = new ArrayList<>();
     public static void main(String[] args) {
-        Vehicle newVehicle= new Vehicle("V104"," Kia Sportage",30);
-        VehicleManager.addVehicle(newVehicle);
+        VehicleManager vehicleManager = new VehicleManager();
+        Vehicle newVehicle = new Vehicle("V104", "Kia Sportage", 30);
+        System.out.println(vehicleManager.addVehicle(newVehicle));
+        vehicleManager.displayVehicles();
     }
     public VehicleManager(){
         //  Store existing employees
