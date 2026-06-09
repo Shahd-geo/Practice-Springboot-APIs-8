@@ -6,7 +6,7 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class VehicleManager {
-    private static List<Vehicle> vehicles = new ArrayList<>();
+    private  List<Vehicle> vehicles = new ArrayList<>();
     public static void main(String[] args) {
         Vehicle newVehicle= new Vehicle("V104"," Kia Sportage",30);
         VehicleManager.addVehicle(newVehicle);
@@ -18,7 +18,7 @@ public class VehicleManager {
         vehicles.add(new Vehicle("V103", "Hyundai Elantra", 22 ));
     }
         // Add Create Method
-    public static String addVehicle(Vehicle vehicle) {
+    public  String addVehicle(Vehicle vehicle) {
         for (Vehicle V : vehicles) {
             if (V.getVehicleId().equals(vehicle.getVehicleId())) {
                 return "Vehicle ID already exists , No vehicle was added";
