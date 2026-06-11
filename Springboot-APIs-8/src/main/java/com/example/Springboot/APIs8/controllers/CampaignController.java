@@ -2,6 +2,7 @@ package com.example.Springboot.APIs8.controllers;
 
 import com.example.Springboot.APIs8.entities.Campaign;
 import com.example.Springboot.APIs8.services.CampaignService;
+import jakarta.validation.Valid;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PostMapping;
@@ -16,7 +17,7 @@ public class CampaignController {
     CampaignService campaignService;
 
     @PostMapping("/campaign/add")
-    public Campaign addCampaign(@RequestBody Campaign campaign){
+    public Campaign addCampaign(@Valid @RequestBody Campaign campaign){
         return campaignService.saveCampaign(campaign);
     }
 
