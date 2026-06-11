@@ -2,6 +2,7 @@ package com.example.Springboot.APIs8.controllers;
 
 import com.example.Springboot.APIs8.entities.Employee;
 import com.example.Springboot.APIs8.services.EmployeeService;
+import jakarta.validation.Valid;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PostMapping;
@@ -16,7 +17,7 @@ public class EmployeeController {
     EmployeeService employeeService;
 
     @PostMapping("/add")
-    public Employee addEmployee(@RequestBody Employee employee){
+    public Employee addEmployee(@Valid @RequestBody Employee employee){
         return employeeService.saveEmployee(employee);
     }
 
