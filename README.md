@@ -15,7 +15,6 @@ The project also includes entity relationships, input validation, API testing us
 * Java
 * Spring Boot
 * Spring Data JPA
-* Hibernate
 * MySQL
 * Maven
 * Jakarta Validation
