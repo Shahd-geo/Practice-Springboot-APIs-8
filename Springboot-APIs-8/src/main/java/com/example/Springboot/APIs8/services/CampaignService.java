@@ -13,11 +13,53 @@ public class CampaignService {
         @Autowired
         CampaignRepository campaignRepository;
 
+        //ADD
+
         public Campaign saveCampaign(Campaign campaign){
             return campaignRepository.save(campaign);
         }
+        //GET ALL - FIND ALL
 
         public List<Campaign> getAllCampaigns(){
             return campaignRepository.findAll();
         }
+        //GET BY ID
+        public Campaign getCampaignById(Integer id){
+             return campaignRepository.findById(id).orElse(null);
+         }
+         //updateCampaign
+        public Campaign updateCampaign(Integer id , Campaign updatedCampaign){
+
+        Campaign existingCampaign =campaignRepository.findById(id).orElse(null);
+
+        if(existingCampaign == null){
+            return null;
+        }
+
+        existingCampaign.setCampaignName(
+                updatedCampaign.getCampaignName());
+
+        existingCampaign.setPlatform(
+                updatedCampaign.getPlatform());
+
+        existingCampaign.setBudget(
+                updatedCampaign.getBudget());
+
+        return campaignRepository.save(existingCampaign);
+    }
+
+    //deleteCampaign
+    public String deleteCampaign(Integer id){
+
+        Campaign campaign = campaignRepository.findById(id).orElse(null);
+
+        if(campaign == null){
+            return "Campaign not found";
+        }
+
+        campaignRepository.deleteById(id);
+
+        return "Campaign deleted successfully";
+    }
+
     }
