@@ -23,16 +23,16 @@ public class EmployeeController {
     public List<Employee> getAllEmployees(){
         return employeeService.getAllEmployees();
     }
-    @GetMapping("/employee/{id}")
+    @GetMapping("/{id}")
     public Employee getEmployeeById(@PathVariable Integer id){
         return employeeService.getEmployeeById(id);
     }
-    @PutMapping("/employee/update/{id}")
+    @PutMapping("/update/{id}")
     public Employee updateEmployee(@PathVariable Integer id, @Valid @RequestBody Employee employee){
 
         return employeeService.updateEmployee(id, employee);
     }
-    @DeleteMapping("/employee/delete/{id}")
+    @DeleteMapping("/delete/{id}")
     public String deleteEmployee(@PathVariable Integer id){
 
         return employeeService.deleteEmployee(id);
